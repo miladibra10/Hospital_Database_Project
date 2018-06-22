@@ -1,9 +1,10 @@
-package model;
+package model.entity;
 
 public class Room {
     int room_id;
     int capacity;
     int rate;
+    int free_cap;
 
     public int getRoom_id() {
         return room_id;
@@ -36,6 +37,4 @@ public class Room {
     public void setFree_cap(int free_cap) {
         this.free_cap = free_cap;
     }
-
-    int free_cap;
 }

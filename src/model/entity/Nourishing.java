@@ -1,9 +1,8 @@
-package model;
+package model.entity;
 
-public class Hospitalization {
+public class Nourishing {
     String national_id;
-    String cause;
-
+    int food_id;
     public String getNational_id() {
         return national_id;
     }
@@ -12,11 +11,11 @@ public class Hospitalization {
         this.national_id = national_id;
     }
 
-    public String getCause() {
-        return cause;
+    public int getFood_id() {
+        return food_id;
     }
 
-    public void setCause(String cause) {
-        this.cause = cause;
+    public void setFood_id(int food_id) {
+        this.food_id = food_id;
     }
 }

@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 public class Prescription {
     String national_id;

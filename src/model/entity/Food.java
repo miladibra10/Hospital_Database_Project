@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 public class Food {
     int food_id;

@@ -1,10 +1,37 @@
-package model;
+package model.entity;
 
 public class TestPres {
     String national_id;
+    String sickfName;
+    String sicklName;
     String testName;
     int lab_id;
     String doc_id;
+    String labName;
+
+    public String getSickfName() {
+        return sickfName;
+    }
+
+    public void setSickfName(String sickfName) {
+        this.sickfName = sickfName;
+    }
+
+    public String getSicklName() {
+        return sicklName;
+    }
+
+    public void setSicklName(String sicklName) {
+        this.sicklName = sicklName;
+    }
+
+    public String getLabName() {
+        return labName;
+    }
+
+    public void setLabName(String labName) {
+        this.labName = labName;
+    }
 
     public String getNational_id() {
         return national_id;

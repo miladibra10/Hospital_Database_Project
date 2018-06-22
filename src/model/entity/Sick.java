@@ -1,10 +1,10 @@
-package model;
+package model.entity;
 
 public class Sick {
     String national_id;
     String fname;
     String lname;
-    String enroll_dare;
+    String enroll_date;
     String end_date;
     String phone;
     String Bdate;
@@ -36,11 +36,11 @@ public class Sick {
     }
 
     public String getEnroll_dare() {
-        return enroll_dare;
+        return enroll_date;
     }
 
     public void setEnroll_dare(String enroll_dare) {
-        this.enroll_dare = enroll_dare;
+        this.enroll_date = enroll_dare;
     }
 
     public String getEnd_date() {

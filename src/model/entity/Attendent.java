@@ -1,8 +1,10 @@
-package model;
+package model.entity;
 
 public class Attendent {
     String national_id;
     String fname;
+    String lname;
+    int sick_id;
 
     public String getNational_id() {
         return national_id;
@@ -36,6 +38,4 @@ public class Attendent {
         this.sick_id = sick_id;
     }
 
-    String lname;
-    int sick_id;
 }

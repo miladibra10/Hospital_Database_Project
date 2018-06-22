@@ -1,10 +1,37 @@
-package model;
+package model.entity;
 
 public class RepHistory {
     int room_id;
     String national_id;
+    String pfName;
+    String plName;
     int repair_id;
     String date;
+    String title;
+
+    public String getPfName() {
+        return pfName;
+    }
+
+    public void setPfName(String pfName) {
+        this.pfName = pfName;
+    }
+
+    public String getPlName() {
+        return plName;
+    }
+
+    public void setPlName(String plName) {
+        this.plName = plName;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public int getRoom_id() {
         return room_id;
