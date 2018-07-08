@@ -3,35 +3,12 @@ package model.entity;
 public class RepHistory {
     int room_id;
     String national_id;
-    String pfName;
-    String plName;
+    String personnelfName;
+    String personnellName;
     int repair_id;
     String date;
     String title;
-
-    public String getPfName() {
-        return pfName;
-    }
-
-    public void setPfName(String pfName) {
-        this.pfName = pfName;
-    }
-
-    public String getPlName() {
-        return plName;
-    }
-
-    public void setPlName(String plName) {
-        this.plName = plName;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    String description;
 
     public int getRoom_id() {
         return room_id;
@@ -47,6 +24,22 @@ public class RepHistory {
 
     public void setNational_id(String national_id) {
         this.national_id = national_id;
+    }
+
+    public String getPersonnelfName() {
+        return personnelfName;
+    }
+
+    public void setPersonnelfName(String personnelfName) {
+        this.personnelfName = personnelfName;
+    }
+
+    public String getPersonnellName() {
+        return personnellName;
+    }
+
+    public void setPersonnellName(String personnellName) {
+        this.personnellName = personnellName;
     }
 
     public int getRepair_id() {
@@ -65,6 +58,14 @@ public class RepHistory {
         this.date = date;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -72,6 +73,4 @@ public class RepHistory {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    String description;
 }

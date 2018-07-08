@@ -1,6 +1,8 @@
 package model.dataAccess;
 
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.ResultSet;
 import model.entity.Doctor;
 
 import java.sql.DriverManager;
@@ -23,7 +25,29 @@ public class DoctorDetailDA {
 
     public ArrayList<Doctor> getDoctors(String name)
     {
-        //TODO
-        return null;
+        ArrayList<Doctor> result = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement("SELECT * FROM doctor");
+            ResultSet resultSet = (ResultSet) preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Doctor temp = new Doctor();
+                temp.setDoc_id(resultSet.getString("doc_id"));
+                temp.setFname(resultSet.getString("fname"));
+                temp.setLname(resultSet.getString("lname"));
+                temp.setGender(resultSet.getString("gender"));
+                temp.setSpeciality(resultSet.getString("speciality"));
+                result.add(temp);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
     }
 }
