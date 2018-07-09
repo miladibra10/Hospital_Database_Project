@@ -85,14 +85,13 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li><a href="../Hospital/index.html">Home</a></li>
-                <li><a href="../Hospital/Patient.html">Patient</a></li>
-                <li><a href="../Hospital/Doctors.html">Doctors</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/patients">Patient</a></li>
+                <li><a href="/doctors">Doctors</a></li>
                 <li><a href="/drugs">Drugs</a></li>
-                <li><a href="../Hospital/Labs.html">Labs</a></li>
-                <li><a href="../Hospital/Rooms.html">Rooms</a></li>
-                <li><a href="../Hospital/Services.html">Services</a></li>
-                <li><a href="../Hospital/Admin.html">Admin</a></li>
+                <li><a href="/labs">Labs</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/services">Services</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -224,20 +223,20 @@
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/superfish/hoverIntent.js"></script>
-<script src="lib/superfish/superfish.min.js"></script>
-<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/jquery/jquery-migrate.min.js"></script>
+<script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/lib/easing/easing.min.js"></script>
+<script src="static/lib/wow/wow.min.js"></script>
+<script src="static/lib/superfish/hoverIntent.js"></script>
+<script src="static/lib/superfish/superfish.min.js"></script>
+<script src="static/lib/magnific-popup/magnific-popup.min.js"></script>
 
 <!-- Contact Form JavaScript File -->
-<script src="contactform/contactform.js"></script>
+<script src="static/contactform/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
-<script src="js/main.js"></script>
+<script src="static/js/main.js"></script>
 
 </body>
 </html>

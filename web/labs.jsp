@@ -1,9 +1,9 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="model.entity.Drug" %><%--
+<%@ page import="model.entity.Lab" %><%--
   Created by IntelliJ IDEA.
-  User: miladibra
-  Date: 6/21/18
-  Time: 6:33 PM
+  User: user
+  Date: 27/06/2018
+  Time: 11:41 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -48,27 +48,27 @@
 
 </head>
 
-    <style>
-        .table-striped tbody tr:nth-of-type(odd) {
-            background: linear-gradient(45deg, rgba(29, 224, 153, 0.55), rgba(29, 200, 205, 0.55)) !important;
-        }
+<style>
+    .table-striped tbody tr:nth-of-type(odd) {
+        background: linear-gradient(45deg, rgba(29, 224, 153, 0.55), rgba(29, 200, 205, 0.55)) !important;
+    }
 
-        .table-striped tbody tr:hover {
-            background: linear-gradient(45deg, rgba(29, 224, 153, 0.5), rgba(29, 200, 205, 0.5)) !important;
-            opacity: 0.6;
-        }
+    .table-striped tbody tr:hover {
+        background: linear-gradient(45deg, rgba(29, 224, 153, 0.5), rgba(29, 200, 205, 0.5)) !important;
+        opacity: 0.6;
+    }
 
-        #intro {
-            background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("static/img/Drugs.jpg") center top no-repeat;
-        }
+    #intro {
+        background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("static/img/Lab.jpg") center top no-repeat;
+    }
 
-        .search {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 20%;
-        }
-    </style>
+    .search {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+</style>
 
 
 <body>
@@ -87,13 +87,13 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/patients">Patient</a></li>
-                <li><a href="/doctors">Doctors</a></li>
+                <li><a href="../Hospital/index.html">Home</a></li>
+                <li><a href="../Hospital/Patient.html">Patient</a></li>
+                <li><a href="../Hospital/Doctors.html">Doctors</a></li>
                 <li><a href="/drugs">Drugs</a></li>
                 <li><a href="/labs">Labs</a></li>
                 <li><a href="/rooms">Rooms</a></li>
-                <li><a href="/services">Services</a></li>
+                <li><a href="../Hospital/Services.html">Services</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -108,52 +108,42 @@
         <h2>Welcome to Hospital</h2>
     </div>
 
-
 </section><!-- #intro -->
 
 <main id="main">
 
-    <!--==========================
-      About Us Section
-    ============================-->
     <section id="about" class="section-sm">
         <div class="container-fluid">
             <div class="section-header">
-                <h3 class="section-title">Drugs</h3>
+                <h3 class="section-title">Labratoars</h3>
                 <span class="section-divider"></span>
                 <p class="section-description">
-                    find your cure drugs
+                    find your needing Labs
                 </p>
             </div>
         </div>
     </section><!-- #about -->
-    <%
-        ArrayList<Drug> result = (ArrayList<Drug>) request.getAttribute("result");
-    %>
+
     <section id="PatientsList">
         <div class="container-fluid col-sm-10">
             <table class="table table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>Drug ID</th>
+                    <th>Laboratory ID</th>
                     <th>Name</th>
-                    <th>Description</th>
                 </tr>
                 </thead>
                 <tbody>
                 <%
-                    for (Drug drug : result) {
+                    ArrayList<Lab> result = (ArrayList<Lab>) request.getAttribute("result");
+                    for (Lab lab : result) {
                         out.print("<tr>");
                             out.print("<td>");
-                            out.print(drug.getDrug_id());
+                            out.print(lab.getLab_id());
                             out.print("</td>");
 
                             out.print("<td>");
-                            out.print(drug.getDrugName());
-                            out.print("</td>");
-
-                            out.print("<td>");
-                            out.print(drug.getDescription());
+                            out.print(lab.getLabName());
                             out.print("</td>");
                         out.print("</tr>");
                     }
@@ -191,6 +181,7 @@
                 <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
                     <a href="#intro" class="scrollto">Home</a>
                     <a href="#about" class="scrollto">About</a>
+
                 </nav>
             </div>
         </div>
@@ -200,21 +191,20 @@
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="static/lib/jquery/jquery.min.js"></script>
-<script src="static/lib/jquery/jquery-migrate.min.js"></script>
-<script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="static/lib/easing/easing.min.js"></script>
-<script src="static/lib/wow/wow.min.js"></script>
-<script src="static/lib/superfish/hoverIntent.js"></script>
-<script src="static/lib/superfish/superfish.min.js"></script>
-<script src="static/lib/magnific-popup/magnific-popup.min.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/magnific-popup/magnific-popup.min.js"></script>
 
 <!-- Contact Form JavaScript File -->
-<script src="static/contactform/contactform.js"></script>
+<script src="contactform/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
-<script src="static/js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
-

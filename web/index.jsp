@@ -68,14 +68,13 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li><a href="../Hospital/index.html">Home</a></li>
-                <li><a href="../Hospital/Patient.html">Patient</a></li>
-                <li><a href="../Hospital/Doctors.html">Doctors</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/patients">Patient</a></li>
+                <li><a href="/doctors">Doctors</a></li>
                 <li><a href="/drugs">Drugs</a></li>
-                <li><a href="../Hospital/Labs.html">Labs</a></li>
-                <li><a href="../Hospital/Rooms.html">Rooms</a></li>
-                <li><a href="../Hospital/Services.html">Services</a></li>
-                <li><a href="../Hospital/Admin.html">Admin</a></li>
+                <li><a href="/labs">Labs</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/services">Services</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>

@@ -1,8 +1,9 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.entity.RepHistory" %><%--
   Created by IntelliJ IDEA.
   User: miladibra
   Date: 6/21/18
-  Time: 6:32 PM
+  Time: 6:34 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -45,13 +46,6 @@
     ======================================================= -->
 
 </head>
-
-<!-- =======================================================
-  Theme Name: Avilon
-  Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-======================================================= -->
 <style>
     .table-striped tbody tr:nth-of-type(odd) {
         background: linear-gradient(45deg, rgba(29, 224, 153, 0.55), rgba(29, 200, 205, 0.55)) !important;
@@ -63,7 +57,7 @@
     }
 
     #intro {
-        background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("static/img/Patient.jpeg") center top no-repeat;
+        background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8)), url("static/img/y3.jpg") center top no-repeat;
     }
 
     .search {
@@ -92,14 +86,13 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li><a href="../Hospital/index.html">Home</a></li>
-                <li><a href="../Hospital/Patient.html">Patient</a></li>
-                <li><a href="../Hospital/Doctors.html">Doctors</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/patients">Patient</a></li>
+                <li><a href="/doctors">Doctors</a></li>
                 <li><a href="/drugs">Drugs</a></li>
-                <li><a href="../Hospital/Labs.html">Labs</a></li>
-                <li><a href="../Hospital/Rooms.html">Rooms</a></li>
-                <li><a href="../Hospital/Services.html">Services</a></li>
-                <li><a href="../Hospital/Admin.html">Admin</a></li>
+                <li><a href="/labs">Labs</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/services">Services</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -121,85 +114,70 @@
     <!--==========================
       About Us Section
     ============================-->
-    <section id="about" class="section-sm">
+    <section id="about" class="section-bg">
         <div class="container-fluid">
             <div class="section-header">
-                <h3 class="section-title">Patients</h3>
+                <h3 class="section-title">Services</h3>
                 <span class="section-divider"></span>
                 <p class="section-description">
-                    find your patient here
+                    check the last repairs
                 </p>
             </div>
-
-
-            <form action="/action_page.php" class="form col-sm-12">
-                <div class="row">
-
-                    <div class="col-sm-6 wow fadeInLeft">
-
-                        First name:<br>
-                        <input class="col-sm-12 form-control" type="text" name="firstname"
-                               placeholder="Enter First Name">
-                        <br>
-
-                    </div>
-
-                    <div class="col-sm-6 content wow fadeInRight">
-
-                        Last name:<br>
-                        <input class="col-sm-12 form-control" type="text" name="lastname" placeholder="Enter Last Name">
-                        <br>
-
-                    </div>
-
-                    <div class="col-sm-12 wow fadeInUp">
-                        <br>
-
-                        <input class="col-sm-2 search btn form-control"
-                               style="background:linear-gradient(45deg, rgba(29, 224, 153, 0.5), rgba(29, 200, 205, 0.5)) !important"
-                               type="submit" value="search">
-
-                    </div>
-
-                </div>
-            </form>
-
         </div>
 
     </section><!-- #about -->
 
     <section id="patientList">
+        <br>
         <div class="container-fluid col-sm-10">
             <table class="table table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>Room ID</th>
+                    <th>Personnel First Name</th>
+                    <th>Personnel Last Name</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Description</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+                <%
+                    ArrayList<RepHistory> result = (ArrayList<RepHistory>) request.getAttribute("result");
+                    for (RepHistory repHistory : result) {
+                        out.print("<tr>");
+                            out.print("<td>");
+                            out.print(repHistory.getRoom_id());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(repHistory.getPersonnelfName());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(repHistory.getPersonnellName());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(repHistory.getTitle());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(repHistory.getDate());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(repHistory.getDescription());
+                            out.print("</td>");
+
+                        out.print("</tr>");
+                    }
+                %>
                 </tbody>
             </table>
 
         </div>
-
-        </div>
+    <%--</div>--%>
     </section><!-- #gallery -->
 
 </main>
@@ -238,20 +216,20 @@
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/superfish/hoverIntent.js"></script>
-<script src="lib/superfish/superfish.min.js"></script>
-<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/jquery/jquery-migrate.min.js"></script>
+<script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/lib/easing/easing.min.js"></script>
+<script src="static/lib/wow/wow.min.js"></script>
+<script src="static/lib/superfish/hoverIntent.js"></script>
+<script src="static/lib/superfish/superfish.min.js"></script>
+<script src="static/lib/magnific-popup/magnific-popup.min.js"></script>
 
 <!-- Contact Form JavaScript File -->
-<script src="contactform/contactform.js"></script>
+<script src="static/contactform/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
-<script src="js/main.js"></script>
+<script src="static/js/main.js"></script>
 
 </body>
 </html>

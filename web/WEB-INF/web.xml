@@ -27,6 +27,14 @@
         <servlet-name>Rooms</servlet-name>
         <url-pattern>/rooms</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Labs</servlet-name>
+        <servlet-class>controller.Labs</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Labs</servlet-name>
+        <url-pattern>/labs</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/static/*</url-pattern>

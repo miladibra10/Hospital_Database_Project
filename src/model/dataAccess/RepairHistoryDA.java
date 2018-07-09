@@ -36,7 +36,6 @@ public class RepairHistoryDA {
                 temp.setDescription(resultSet.getString("description"));
                 temp.setPersonnelfName(resultSet.getString("fname"));
                 temp.setPersonnellName(resultSet.getString("lname"));
-                temp.setDescription(resultSet.getString("description"));
                 temp.setTitle(resultSet.getString("title"));
                 temp.setRoom_id(resultSet.getInt("room_id"));
                 result.add(temp);
