@@ -54,4 +54,38 @@ public class SickDetailDA {
         }
         return result;
     }
+
+    public ArrayList<Sick> getSickSearch(String first_name,String last_name)
+    {
+        ArrayList<Sick> result = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement("SELECT * FROM sick where fname like ? and lname like ?");
+            preparedStatement.setString(1,"%" + first_name + "%");
+            preparedStatement.setString(2,"%" + last_name + "%");
+            ResultSet resultSet = (ResultSet) preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Sick temp = new Sick();
+                temp.setNational_id(resultSet.getString("national_id"));
+                temp.setRoom_id(resultSet.getInt("room_id"));
+                temp.setBdate(resultSet.getString("bdate"));
+                temp.setEnd_date(resultSet.getString("end_date"));
+                temp.setEnroll_dare(resultSet.getString("enroll_date"));
+                temp.setFname(resultSet.getString("fname"));
+                temp.setLname(resultSet.getString("lname"));
+                temp.setPhone(resultSet.getString("phone"));
+                temp.setGender(resultSet.getString("gender"));
+                result.add(temp);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
 }

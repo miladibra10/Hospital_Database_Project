@@ -48,4 +48,43 @@ public class DoctorDetailDA {
         }
         return result;
     }
+
+    public ArrayList<Doctor> getDoctorSearch(String first_name,String last_name)
+    {
+        ArrayList<Doctor> result = new ArrayList<>();
+        try {
+            if(first_name==null)
+            {
+                first_name="";
+            }
+            if(last_name==null)
+            {
+                last_name="";
+            }
+            PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement("SELECT * FROM doctor where fname like ? or lname like ?" );
+            preparedStatement.setString(1,"%" + first_name + "%");
+            preparedStatement.setString(2,"%" + last_name + "%");
+            ResultSet resultSet = (ResultSet) preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Doctor temp = new Doctor();
+                temp.setDoc_id(resultSet.getString("doc_id"));
+                temp.setFname(resultSet.getString("fname"));
+                temp.setLname(resultSet.getString("lname"));
+                temp.setSpeciality(resultSet.getString("speciality"));
+                temp.setGender(resultSet.getString("gender"));
+                result.add(temp);
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
 }

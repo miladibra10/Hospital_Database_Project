@@ -28,6 +28,10 @@ public class Configuration {
     }
 
     public static String getConnectionString() {
+        return connectionStr+getDataBaseName();
+    }
+
+    public static String getConnectionStringForInstall() {
         return connectionStr;
     }
 }

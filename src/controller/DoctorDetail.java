@@ -14,10 +14,12 @@ public class DoctorDetail extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DoctorDetailDA doctorDetailDA = new DoctorDetailDA();
-        ArrayList<Doctor> result = new ArrayList<>();
-        if(request.getParameter("name")!=null)
+        ArrayList<Doctor> result;
+        if(request.getParameter("firstname")!=null || request.getParameter("lastname")!=null)
         {
-            //TODO
+            String fname = request.getParameter("firstname");
+            String lname = request.getParameter("lastname");
+            result = doctorDetailDA.getDoctorSearch(fname,lname);
         }
         else{
             result = doctorDetailDA.getDoctors();

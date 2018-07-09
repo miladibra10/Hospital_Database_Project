@@ -17,7 +17,9 @@ public class SickDetail extends HttpServlet {
         ArrayList<Sick> result = new ArrayList<>();
         if(request.getParameter("name")!=null)
         {
-            //TODO
+            String fname = request.getParameter("firstname");
+            String lname = request.getParameter("lastname");
+            result = sickDetailDA.getSickSearch(fname,lname);
         }
         else{
             result = sickDetailDA.getSicks();

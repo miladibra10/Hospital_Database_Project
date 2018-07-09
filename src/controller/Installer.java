@@ -11,7 +11,7 @@ public class Installer {
     public static void main(String[] args) {
         try {
             Class.forName(Configuration.getMysqlDriver());
-            Connection connection = (Connection) DriverManager.getConnection(Configuration.getConnectionString(), Configuration.getMysqlUser(), Configuration.getMysqlPass());
+            Connection connection = (Connection) DriverManager.getConnection(Configuration.getConnectionStringForInstall(), Configuration.getMysqlUser(), Configuration.getMysqlPass());
             connection.setAutoCommit(true);
             createDatabase(connection);
             createTables(connection);

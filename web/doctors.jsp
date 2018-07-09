@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.entity.Doctor" %><%--
   Created by IntelliJ IDEA.
   User: miladibra
   Date: 6/21/18
@@ -120,7 +121,7 @@
                 </p>
             </div>
 
-            <form action="/action_page.php" class="form col-sm-12">
+            <form action="/doctors" class="form col-sm-12">
                 <div class="row">
 
                     <div class="col-sm-6 wow fadeInLeft">
@@ -160,31 +161,42 @@
             <table class="table table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>Doctor ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Speciality</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+                <%
+                    ArrayList<Doctor> result = (ArrayList<Doctor>) request.getAttribute("result");
+                    for (Doctor doctor : result) {
+                        out.print("<tr>");
+                            out.print("<td>");
+                            out.print(doctor.getDoc_id());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(doctor.getFname());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(doctor.getLname());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(doctor.getGender());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(doctor.getSpeciality());
+                            out.print("</td>");
+                        out.print("</tr>");
+                    }
+                %>
                 </tbody>
             </table>
-
-        </div>
 
         </div>
     </section><!-- #gallery -->

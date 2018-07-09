@@ -162,8 +162,6 @@
             </table>
 
         </div>
-
-        </div>
     </section><!-- #gallery -->
 </main>
 
