@@ -19,6 +19,14 @@
         <servlet-name>DrugDetail</servlet-name>
         <url-pattern>/drugs</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Rooms</servlet-name>
+        <servlet-class>controller.EmptyRooms</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Rooms</servlet-name>
+        <url-pattern>/rooms</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/static/*</url-pattern>

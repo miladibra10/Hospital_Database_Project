@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.entity.Room" %><%--
   Created by IntelliJ IDEA.
   User: miladibra
   Date: 6/21/18
@@ -91,7 +92,7 @@
                 <li><a href="../Hospital/Doctors.html">Doctors</a></li>
                 <li><a href="/drugs">Drugs</a></li>
                 <li><a href="../Hospital/Labs.html">Labs</a></li>
-                <li><a href="../Hospital/Rooms.html">Rooms</a></li>
+                <li><a href="/rooms">Rooms</a></li>
                 <li><a href="../Hospital/Services.html">Services</a></li>
                 <li><a href="../Hospital/Admin.html">Admin</a></li>
             </ul>
@@ -126,33 +127,47 @@
             </div>
         </div>
     </section><!-- #about -->
-
+    <%
+        ArrayList<Room> result = (ArrayList<Room>) request.getAttribute("result");
+    %>
     <section id="patientList">
         <div class="container-fluid col-sm-10">
             <br>
             <table class="table table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
+                    <th>Room ID</th>
+                    <th>Capacity</th>
+                    <th>Rate</th>
+                    <th>Free Space</th>
                 </tr>
                 </thead>
                 <tbody>
+                <%
+                    for (Room room : result) {
+                        out.print("<tr>");
+                            out.print("<td>");
+                            out.print(room.getRoom_id());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(room.getCapacity());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(room.getRate());
+                            out.print("</td>");
+
+                            out.print("<td>");
+                            out.print(room.getFree_cap());
+                            out.print("</td>");
+                        out.print("</tr>");
+                    }
+                %>
                 <tr>
                     <td>John</td>
                     <td>Doe</td>
                     <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
                 </tr>
                 </tbody>
             </table>
