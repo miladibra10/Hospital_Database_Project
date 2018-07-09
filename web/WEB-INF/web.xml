@@ -35,6 +35,14 @@
         <servlet-name>Labs</servlet-name>
         <url-pattern>/labs</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>RepairHistory</servlet-name>
+        <servlet-class>controller.RepairHistory</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RepairHistory</servlet-name>
+        <url-pattern>/services</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/static/*</url-pattern>

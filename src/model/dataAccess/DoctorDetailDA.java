@@ -23,7 +23,7 @@ public class DoctorDetailDA {
         }
     }
 
-    public ArrayList<Doctor> getDoctors(String name)
+    public ArrayList<Doctor> getDoctors()
     {
         ArrayList<Doctor> result = new ArrayList<>();
         try {
