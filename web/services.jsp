@@ -129,6 +129,7 @@
 
     <section id="patientList">
         <br>
+        <div class="col-sm-1"></div>
         <div class="container-fluid col-sm-10">
             <table class="table table-hover table-striped">
                 <thead>
@@ -176,6 +177,7 @@
                 </tbody>
             </table>
         </div>
+        <div class="col-sm-1"></div>
     <%--</div>--%>
     </section><!-- #gallery -->
 

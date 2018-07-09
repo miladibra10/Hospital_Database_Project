@@ -14,8 +14,8 @@ public class SickDetail extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SickDetailDA sickDetailDA = new SickDetailDA();
-        ArrayList<Sick> result = new ArrayList<>();
-        if(request.getParameter("name")!=null)
+        ArrayList<Sick> result;
+        if(request.getParameter("firstname")!=null || request.getParameter("lastname")!=null)
         {
             String fname = request.getParameter("firstname");
             String lname = request.getParameter("lastname");

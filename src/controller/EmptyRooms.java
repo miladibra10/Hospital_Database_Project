@@ -14,7 +14,7 @@ public class EmptyRooms extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EmptyRoomsDA emptyRoomsDA = new EmptyRoomsDA();
-        ArrayList<Room> result = new ArrayList<>();
+        ArrayList<Room> result = emptyRoomsDA.getFreeRooms();
         request.setAttribute("result",result);
         request.getRequestDispatcher("/free-rooms.jsp").forward(request,response);
     }

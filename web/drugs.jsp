@@ -131,6 +131,7 @@
         ArrayList<Drug> result = (ArrayList<Drug>) request.getAttribute("result");
     %>
     <section id="PatientsList">
+        <div class="col-sm-1"></div>
         <div class="container-fluid col-sm-10">
             <table class="table table-hover table-striped">
                 <thead>
@@ -162,6 +163,7 @@
             </table>
 
         </div>
+        <div class="col-sm-1"></div>
     </section><!-- #gallery -->
 </main>
 

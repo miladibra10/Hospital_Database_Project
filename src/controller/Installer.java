@@ -48,7 +48,7 @@ public class Installer {
         createPrescription(connection);
         createTestPres(connection);
         createView(connection);
-//        createTrigger(connection);
+        createTrigger(connection);
     }
 
     public static void createView(Connection connection) throws SQLException {
@@ -61,7 +61,7 @@ public class Installer {
 
     public static void createTrigger(Connection connection) throws SQLException {
         createTriggerBackup(connection);
-        createTriggerRoom(connection);
+//        createTriggerRoom(connection);
     }
 
     public static void createTriggerRoom(Connection connection) throws SQLException {
@@ -256,7 +256,7 @@ public class Installer {
         Statement statement = (Statement) connection.createStatement();
         statement.execute("use Hospital");
         statement.execute("create table room(" +
-                "room_id int PRIMARY KEY ," +
+                "room_id int AUTO_INCREMENT PRIMARY KEY ," +
                 "capacity int," +
                 "rate int," +
                 "free_cap int" +

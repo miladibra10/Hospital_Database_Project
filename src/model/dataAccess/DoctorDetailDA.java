@@ -61,7 +61,7 @@ public class DoctorDetailDA {
             {
                 last_name="";
             }
-            PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement("SELECT * FROM doctor where fname like ? or lname like ?" );
+            PreparedStatement preparedStatement = (PreparedStatement) connection.prepareStatement("SELECT * FROM doctor where fname like ? and lname like ?" );
             preparedStatement.setString(1,"%" + first_name + "%");
             preparedStatement.setString(2,"%" + last_name + "%");
             ResultSet resultSet = (ResultSet) preparedStatement.executeQuery();

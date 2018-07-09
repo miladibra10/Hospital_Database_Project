@@ -132,7 +132,7 @@
             </div>
 
 
-            <form action="/action_page.php" class="form col-sm-12">
+            <form action="/patients" class="form col-sm-12">
                 <div class="row">
 
                     <div class="col-sm-6 wow fadeInLeft">
@@ -169,6 +169,7 @@
     </section><!-- #about -->
 
     <section id="patientList">
+        <div class="col-sm-1"></div>
         <div class="container-fluid col-sm-10">
             <table class="table table-hover table-striped">
                 <thead>
@@ -231,6 +232,7 @@
             </table>
 
         </div>
+        <div class="col-sm-1"></div>
     </section><!-- #gallery -->
 
 </main>

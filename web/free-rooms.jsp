@@ -130,6 +130,7 @@
         ArrayList<Room> result = (ArrayList<Room>) request.getAttribute("result");
     %>
     <section id="patientList">
+        <div class="col-sm-1"></div>
         <div class="container-fluid col-sm-10">
             <br>
             <table class="table table-hover table-striped">
@@ -166,6 +167,7 @@
                 </tbody>
             </table>
         </div>
+        <div class="col-sm-1"></div>
     </section><!-- #gallery -->
 
 </main>

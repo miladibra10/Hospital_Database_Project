@@ -121,15 +121,15 @@
 
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="static/img/1.jpg" alt="" style="width:100%;">
+                            <img src="static/img/11.jpg" alt="" style="width:100%;">
                         </div>
 
                         <div class="item">
-                            <img src="static/img/1.jpg" alt="" style="width:100%;">
+                            <img src="static/img/22.jpg" alt="" style="width:100%;">
                         </div>
 
                         <div class="item">
-                            <img src="static/img/1.jpg" alt="" style="width:100%;">
+                            <img src="static/img/333.jpg" alt="" style="width:100%;">
                         </div>
                     </div>
 
