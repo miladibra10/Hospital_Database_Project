@@ -88,7 +88,7 @@
                 <li><a href="../Hospital/index.html">Home</a></li>
                 <li><a href="../Hospital/Patient.html">Patient</a></li>
                 <li><a href="../Hospital/Doctors.html">Doctors</a></li>
-                <li><a href="../Hospital/Drugs.html">Drugs</a></li>
+                <li><a href="/drugs">Drugs</a></li>
                 <li><a href="../Hospital/Labs.html">Labs</a></li>
                 <li><a href="../Hospital/Rooms.html">Rooms</a></li>
                 <li><a href="../Hospital/Services.html">Services</a></li>
