@@ -16,6 +16,6 @@ public class EmptyRooms extends HttpServlet {
         EmptyRoomsDA emptyRoomsDA = new EmptyRoomsDA();
         ArrayList<Room> result = new ArrayList<>();
         request.setAttribute("result",result);
-        request.getRequestDispatcher("/rooms").forward(request,response);
+        request.getRequestDispatcher("/free-rooms.jsp").forward(request,response);
     }
 }

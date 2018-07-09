@@ -87,13 +87,13 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li><a href="../Hospital/index.html">Home</a></li>
-                <li><a href="../Hospital/Patient.html">Patient</a></li>
-                <li><a href="../Hospital/Doctors.html">Doctors</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/patients">Patient</a></li>
+                <li><a href="/doctors">Doctors</a></li>
                 <li><a href="/drugs">Drugs</a></li>
                 <li><a href="/labs">Labs</a></li>
                 <li><a href="/rooms">Rooms</a></li>
-                <li><a href="../Hospital/Services.html">Services</a></li>
+                <li><a href="/services">Services</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -157,54 +157,25 @@
     </section><!-- #gallery -->
 </main>
 
-<!--==========================
-  Footer
-============================-->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 text-lg-left text-center">
-                <div class="copyright">
-                    &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    <!--
-                      All the links in the footer should remain intact.
-                      You can delete the links only if you purchased the pro version.
-                      Licensing information: https://bootstrapmade.com/license/
-                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
-                    -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-                    <a href="#intro" class="scrollto">Home</a>
-                    <a href="#about" class="scrollto">About</a>
 
-                </nav>
-            </div>
-        </div>
-    </div>
-</footer><!-- #footer -->
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/superfish/hoverIntent.js"></script>
-<script src="lib/superfish/superfish.min.js"></script>
-<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/jquery/jquery-migrate.min.js"></script>
+<script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/lib/easing/easing.min.js"></script>
+<script src="static/lib/wow/wow.min.js"></script>
+<script src="static/lib/superfish/hoverIntent.js"></script>
+<script src="static/lib/superfish/superfish.min.js"></script>
+<script src="static/lib/magnific-popup/magnific-popup.min.js"></script>
 
 <!-- Contact Form JavaScript File -->
-<script src="contactform/contactform.js"></script>
+<script src="static/contactform/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
-<script src="js/main.js"></script>
+<script src="static/js/main.js"></script>
 
 </body>
 </html>

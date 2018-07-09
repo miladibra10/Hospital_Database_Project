@@ -5,7 +5,7 @@ public class Configuration {
     private static final String mysqlUser = "root";
     private static final String mysqlPass = "est946p1376104";
     private static final String connectionStr = "jdbc:mysql://localhost/";
-    private static final String dataBaseName = "hospital";
+    private static final String dataBaseName = "Hospital";
 
     public static String getMysqlDriver() {
         return mysqlDriver;
@@ -28,6 +28,6 @@ public class Configuration {
     }
 
     public static String getConnectionString() {
-        return connectionStr+getDataBaseName();
+        return connectionStr;
     }
 }
